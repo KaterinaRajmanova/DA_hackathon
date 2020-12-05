@@ -143,6 +143,14 @@ public class TestClass {
         WebElement btnRegiester = browser.findElement(By.id("submitAccount"));
        btnRegiester.click();
         Thread.sleep(2000);
+
+        WebElement alert = browser.findElement(By.className("alert"));
+
+        Assert.assertTrue(alert.isDisplayed());
+
+
+        Thread.sleep(2000);
+
         
 
     }
