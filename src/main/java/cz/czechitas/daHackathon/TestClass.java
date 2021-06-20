@@ -45,14 +45,9 @@ public class TestClass {
         WebElement element = browser.findElement(By.xpath("//a[@href=\"http://www.czechitas-hackhaton.cz/en/home/4-super-delux-rooms.html\"]"));
         element.click();
         String windowHandle = browser.getWindowHandle();
-        //Get the list of window handles
         ArrayList tabs = new ArrayList(browser.getWindowHandles());
         System.out.println(tabs.get(0));
         System.out.println(tabs.size());
-        //Use the list of window handles to switch between windows
-        //browser.switchTo().window(tabs.get(0));
-        //Switch back to original window
-        //browser.switchTo().window(mainWindowHandle);
         System.out.println("vzhledem k náročnosti jsme test odložily k pozdějšímu dokončení");
         Assert.assertEquals("url není shodná", "http://www.czechitas-hackhaton.cz/en/home/4-super-delux-rooms.html", browser.getCurrentUrl());
     }
@@ -70,7 +65,6 @@ public class TestClass {
         WebElement shoppingCart = browser.findElement(By.xpath("//span[@class=\"badge badge_style ajax_cart_quantity unvisible\"]"));
         Assert.assertEquals("počet objednaných pokojů se neshoduje s počtem v shoppingCart", 1, shoppingCart.getText());
 
-        //Test se né vždy podařilo dokončit, protože byly vyprodané pokoje
 
     }
 
