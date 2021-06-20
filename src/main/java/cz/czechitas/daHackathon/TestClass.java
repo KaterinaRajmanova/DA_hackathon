@@ -18,11 +18,6 @@ public class TestClass {
                 "webdriver.gecko.driver",
                 "/Users/Katerina/DA_Testovani/Teorie/Automatizovane_testovani/SeleniumDrivers/geckodriver"
         );
-        //       System.setProperty(
-        //                "webdriver.chrome.driver",
-        //                "/Users/rajman/DA_Testovani/Teorie/Programovani/MaterialyProProgramovani/SeleniumDrivers/chromedriver"
-
-        //       browser = new ChromeDriver();
 
         browser = new FirefoxDriver();
         browser.navigate().to("http://www.czechitas-hackhaton.cz/en/");
